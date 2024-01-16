@@ -1,17 +1,12 @@
 export interface IProduct {
-  id?: number;
-  title?: string;
-  price?: number;
-  description?: string;
-  images?: string[];
-  creationAt?: string;
-  updatedAt?: string;
-  categoryId?: number;
-  category?: {
-    id: number;
-    name: string;
-    image: string;
-    creationAt: string;
-    updatedAt: string;
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
   };
 }

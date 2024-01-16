@@ -20,8 +20,8 @@ export class ProductsService {
   products: IProduct[] = [];
   getAll(): Observable<IProduct[]> {
     return this.http
-      .get<IProduct[]>('https://api.escuelajs.co/api/v1/products', {
-        params: new HttpParams({ fromObject: { limit: 5 } }),
+      .get<IProduct[]>('https://fakestoreapi.com/products', {
+        params: new HttpParams({ fromObject: { limit: 8 } }),
       })
       .pipe(
         delay(200),
@@ -35,7 +35,7 @@ export class ProductsService {
   }
   create(product: IProduct): Observable<IProduct> {
     return this.http
-      .post<IProduct>('https://api.escuelajs.co/api/v1/products', product)
+      .post<IProduct>('https://fakestoreapi.com/products', product)
       .pipe(tap((prod) => this.products.push(prod)));
   }
 }

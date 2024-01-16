@@ -27,11 +27,17 @@ export class CreateProductComponent implements OnInit {
   submit() {
     this.productService
       .create({
+        id: 1,
         title: this.form.value.title as string,
-        price: 10,
-        description: 'A description',
-        categoryId: 1,
-        images: ['https://placeimg.com/640/480/any'],
+        price: 109.95,
+        description:
+          'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
+        category: "men's clothing",
+        image: 'https://tengrinews.kz/userdata/0.jpg',
+        rating: {
+          rate: 3.9,
+          count: 120,
+        },
       })
       .subscribe(() => {
         this.modalService.close();

@@ -1,5 +1,5 @@
 <div class="py-4 px-6 border rounded flex items-center flex-col mb-2">
-  <img [src]="product.images" [alt]="product.title" class="w-1/6 mb-2" />
+  <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2" />
   <h2 class="mb-2 text-md text-center">{{ product.title }}</h2>
   <p>
     Price: <span class="font-bold">{{ product.price | currency }}</span>
@@ -15,9 +15,9 @@
   <div *ngIf="details">
     <p>{{ product.description }}</p>
     <p>
-      <span class="text-red-500 text-3xl">CLOSE ME!!!!!!</span>
+      Rate:
       <span [ngStyle]="{ fontWeight: 'bold' }">{{
-        product.category?.name | number: "1.2-4"
+        product.rating.rate | number: "1.2-4"
       }}</span>
     </p>
   </div>
