@@ -1,28 +1,38 @@
-import {IProduct} from "../models/product";
+import { IProduct } from '../models/product';
 
-export const products: IProduct[] =[
-  {
-  id:1,
-  title:"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-  price:109.95,
-  description:"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-  category:"men's clothing",
-  image:'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-  rating: {
-    rate:3.9,
-    count:120
-  }
-  },
-  {
-    id: 2,
-    title: "Mens Casual Premium Slim Fit T-Shirts ",
-    price: 22.3,
-    description: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-    category: "men's clothing",
-    image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-    rating: {
-      rate: 4.1,
-      count: 259
-    }
-  }
-]
+export const products: IProduct[] = [];
+//   {
+//     id: 2,
+//     title: 'Classic Red Pullover Hoodie',
+//     price: 10,
+//     description:
+//       'Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.',
+//     images: 'https://i.imgur.com/1twoaDy.jpeg',
+//     creationAt: '2024-01-16T00:07:03.000Z',
+//     updatedAt: '2024-01-16T00:07:03.000Z',
+//     category: {
+//       id: 1,
+//       name: 'Clothes',
+//       image: 'https://i.imgur.com/QkIa5tT.jpeg',
+//       creationAt: '2024-01-16T00:07:03.000Z',
+//       updatedAt: '2024-01-16T00:07:03.000Z',
+//     },
+//   },
+//   {
+//     id: 3,
+//     title: 'Classic Heather Gray Hoodie',
+//     price: 69,
+//     description:
+//       'Stay cozy and stylish with our Classic Heather Gray Hoodie. Crafted from soft, durable fabric, it features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs. Perfect for a casual day out or a relaxing evening in, this hoodie is a versatile addition to any wardrobe.',
+//     images: 'https://i.imgur.com/wbIMMme.jpeg',
+//     creationAt: '2024-01-16T00:07:03.000Z',
+//     updatedAt: '2024-01-16T00:07:03.000Z',
+//     category: {
+//       id: 1,
+//       name: 'Clothes',
+//       image: 'https://i.imgur.com/QkIa5tT.jpeg',
+//       creationAt: '2024-01-16T00:07:03.000Z',
+//       updatedAt: '2024-01-16T00:07:03.000Z',
+//     },
+//   },
+// ];
