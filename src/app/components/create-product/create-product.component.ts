@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductsService } from '../../services/products.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-create-product',
   templateUrl: './create-product.component.html',
-  standalone: true,
   styleUrls: ['./create-product.component.scss'],
-  imports: [ReactiveFormsModule, CommonModule],
 })
 export class CreateProductComponent implements OnInit {
+  constructor(
+    private productService: ProductsService,
+    private modalService: ModalService,
+  ) {}
+
   form = new FormGroup({
     title: new FormControl<string>('', [
       Validators.required,
@@ -24,9 +23,19 @@ export class CreateProductComponent implements OnInit {
   get title() {
     return this.form.controls.title as FormControl;
   }
-  constructor() {}
+
   submit() {
-    console.log(this.form.value);
+    this.productService
+      .create({
+        title: this.form.value.title as string,
+        price: 10,
+        description: 'A description',
+        categoryId: 1,
+        images: ['https://placeimg.com/640/480/any'],
+      })
+      .subscribe(() => {
+        this.modalService.close();
+      });
   }
   ngOnInit(): void {}
 }
