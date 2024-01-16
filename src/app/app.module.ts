@@ -5,10 +5,14 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalErrorComponent } from './components/global-error/global-error.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
 import { ModalComponent } from './components/modal/modal.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
+import { FocusDirective } from './directives/focus.directive';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -17,16 +21,21 @@ import { CreateProductComponent } from './components/create-product/create-produ
     GlobalErrorComponent,
     FilterProductsPipe,
     ModalComponent,
+    FocusDirective,
+    CreateProductComponent,
+    ProductPageComponent,
+    AboutPageComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CreateProductComponent,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [],
+  exports: [FocusDirective],
 })
 export class AppModule {}

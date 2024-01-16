@@ -15,9 +15,9 @@
   <div *ngIf="details">
     <p>{{ product.description }}</p>
     <p>
-      Name:
+      <span class="text-red-500 text-3xl">CLOSE ME!!!!!!</span>
       <span [ngStyle]="{ fontWeight: 'bold' }">{{
-        product.category.name | number: "1.2-4"
+        product.category?.name | number: "1.2-4"
       }}</span>
     </p>
   </div>
